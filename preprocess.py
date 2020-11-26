@@ -9,7 +9,6 @@ import pickle
 raw_data = pd.read_csv('./altered_data.csv', )
 drop_index = raw_data[raw_data['race'] == 'Human'].index[150:]
 raw_data.drop(index=drop_index, inplace=True)
-# raw_data.dropna(inplace=True)
 raw_data.sample(frac=1).reset_index(drop=True)
 raw_data.bfill(inplace=True)
 raw_data.ffill(inplace=True)
